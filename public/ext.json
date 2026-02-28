@@ -1,0 +1,9 @@
+{
+  "identifier": "dev.kerstman.income-tax-tracker",
+  "name": "Income & Tax Tracker",
+  "content_type": "SN|Component",
+  "area": "editor-editor",
+  "version": "1.0.0",
+  "description": "Track income and compute Romanian taxes with an interactive table editor.",
+  "url": "https://kerstm.github.io/sn-income-tax-tracker/"
+}

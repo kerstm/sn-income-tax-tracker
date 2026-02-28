@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income & Tax Tracker</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="toolbar">
+      <button id="add-income-btn" class="btn btn-primary">+ Add Income</button>
+      <div class="year-selector">
+        <label for="year-select">Year:</label>
+        <select id="year-select"></select>
+      </div>
+    </div>
+
+    <div id="add-income-form" class="form-panel" style="display:none">
+      <h3>Add Income</h3>
+      <div class="form-row">
+        <label>Date</label>
+        <input type="date" id="income-date">
+      </div>
+      <div class="form-row">
+        <label>Source</label>
+        <div class="combo-row">
+          <select id="income-source"></select>
+          <input type="text" id="new-source" placeholder="New source...">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Description</label>
+        <input type="text" id="income-description" placeholder="Description...">
+      </div>
+      <div class="form-row">
+        <label>Currency</label>
+        <div class="combo-row">
+          <select id="income-currency"></select>
+          <input type="text" id="new-currency" placeholder="New currency...">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Amount</label>
+        <input type="number" id="income-amount" min="0" step="any" placeholder="1000">
+      </div>
+      <div class="form-row" id="rate-row">
+        <label>Exchange Rate (to LEI)</label>
+        <input type="number" id="income-rate" min="0" step="any" placeholder="4.4">
+      </div>
+      <div class="form-row">
+        <label>Amount LEI (computed)</label>
+        <div id="computed-lei" class="computed-value">0.00</div>
+      </div>
+      <div class="form-actions">
+        <button id="save-income" class="btn btn-primary">Save</button>
+        <button id="cancel-income" class="btn btn-ghost">Cancel</button>
+      </div>
+    </div>
+
+    <div id="summary-section">
+      <h2 id="summary-title">Summary</h2>
+      <div id="summary-stats"></div>
+      <div id="monthly-stats"></div>
+      <div id="source-stats"></div>
+    </div>
+
+    <div id="tax-section">
+      <h2 id="tax-title">Tax Calculation</h2>
+      <div id="tax-details"></div>
+    </div>
+
+    <div id="transactions-section">
+      <h2>Transactions</h2>
+      <table id="transactions-table">
+        <thead>
+          <tr><th>Date</th><th>Source</th><th>Description</th><th>Amount</th><th>Cur</th><th>Rate</th><th>Amount LEI</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
