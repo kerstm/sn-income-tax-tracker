@@ -9,7 +9,7 @@ function parseTransactions(text) {
   const rows = [];
   for (const line of lines) {
     const match = line.match(
-      /^\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*([0-9.,]+)\s*\|\s*(\S+)\s*\|\s*([0-9.,]+)\s*\|\s*([0-9.,]+)\s*\|/
+      /^\s*\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*([0-9.,]+)\s*\|\s*(\S+)\s*\|\s*([0-9.,]+)\s*\|\s*([0-9.,]+)\s*\|/
     );
     if (match) {
       rows.push({
